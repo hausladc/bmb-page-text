@@ -36,17 +36,17 @@ Füge dein Package als VCS Repository hinzu (z.B. GitHub):
 
 Via Composer installieren:
 ```
-# composer require bmb/page-text:dev-main
+composer require bmb/page-text:dev-main
 ```
 
 Dann Migration ausführen:
 ```
-# php artisan migrate
+php artisan migrate
 ```
 
 Filament Resource erstellen:
 ```
-# php artisan make:filament-resource PageText --generate --model-namespace= Bmb\\PageText\\Models
+php artisan make:filament-resource PageText --generate --model-namespace= Bmb\\PageText\\Models
 ```
 
 ## Verwendung
