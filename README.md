@@ -35,12 +35,12 @@ Füge dein Package als VCS Repository hinzu (z.B. GitHub):
 ```
 
 Via Composer installieren:
-```bash
+```
 # composer require bmb/page-text:dev-main
 ```
 
 Dann Migration ausführen:
-```bash
+```
 # php artisan migrate
 ```
 
