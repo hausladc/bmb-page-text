@@ -1,0 +1,33 @@
+{
+    "name": "bmb/page-text",
+    "description": "Composer package for page texts in BMB projects.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bmb\\PageText\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bmb\\PageText\\Providers\\PageTextServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Christof Hausladen"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^4.0",
+        "laravel/framework": "^12.0"
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
