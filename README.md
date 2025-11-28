@@ -41,7 +41,7 @@ Via Composer installieren:
 
 Dann Migration ausführen:
 ```bash
-#  php artisan migrate
+# php artisan migrate
 ```
 
 Filament Resource erstellen:
