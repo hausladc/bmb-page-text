@@ -11,7 +11,6 @@ Es bietet eine Filament-Resource für das Backend, Caching der Texte und einen B
   - `key` (string, unique)
   - `label` (string)
   - `text` (text)
-- Filament Resource für CRUD im Backend
 - Blade Helper `page_text('key')` für schnellen Zugriff
 - Automatisches Caching pro Key (1 Stunde)
 - Cache wird beim Speichern oder Löschen eines Textes automatisch invalidiert
