@@ -14,8 +14,8 @@ Es bietet eine Filament-Resource für das Backend, Caching der Texte und einen B
 - Blade Helper `page_text('key')` für schnellen Zugriff
 - Automatisches Caching pro Key (1 Stunde)
 - Cache wird beim Speichern oder Löschen eines Textes automatisch invalidiert
-- Vollständig PSR-4-konform, Laravel-ready
 - Platzhalter in dot notation für Text Ersetzungen
+- Vollständig PSR-4-konform, Laravel-ready
 
 ---
 
