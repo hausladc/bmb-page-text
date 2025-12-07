@@ -71,8 +71,15 @@ php artisan make:filament-resource PageText --generate --model-namespace= Bmb\\P
 
 <!-- Mit Text-Ersetzung und Model/Object -->
 {!! page_text('welcome', false, '', [
-    'user' => $user // $user ist ein Eloquent Model mit ->firstname, ->lastname
+    'user' => $user, // $user ist ein Eloquent Model mit ->firstname, ->lastname
+    'project' => $project->title
 ]) !!}
 ```
+
+### Beispiel: Text Ersetzung
+> <p>Hallo {{ user.firstname }},
+> willkommen auf unserer Website.</p>
+> <p>Wir freuen uns Sie bei unserem Projekt {{ project }} begrüßen zu dürfen.</p>
+> <p>Ihr Team von Test</p>
 
 **Hinweis:** Die Texte werden automatisch für 1 Stunde gecached. Änderungen über die Filament Resource oder Seeder invalidieren den Cache automatisch.
