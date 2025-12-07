@@ -1,6 +1,6 @@
 # Bmb/PageText
 
-**Bmb/PageText** ist ein wiederverwendbares Composer-Package für Laravel + Filament v4, das das Verwalten von dynamischen Seiten-Texten vereinfacht.  
+**Bmb/PageText** ist ein wiederverwendbares Composer-Package für Laravel + Filament v4, das das Verwalten von dynamischen Seiten-Texten vereinfacht.
 Es bietet eine Filament-Resource für das Backend, Caching der Texte und einen Blade-Helper für den einfachen Zugriff in deinen Views.
 
 ---
@@ -15,6 +15,7 @@ Es bietet eine Filament-Resource für das Backend, Caching der Texte und einen B
 - Automatisches Caching pro Key (1 Stunde)
 - Cache wird beim Speichern oder Löschen eines Textes automatisch invalidiert
 - Vollständig PSR-4-konform, Laravel-ready
+- Platzhalter in dot notation für Text Ersetzungen
 
 ---
 
@@ -61,7 +62,17 @@ php artisan make:filament-resource PageText --generate --model-namespace= Bmb\\P
 {{ page_text('footer_text', true) }}
 
 <!-- Mit Fallback, falls der Key nicht existiert -->
-{{ page_text('header_text', false, 'Standard-Text') }}
+{!! page_text('header_text', false, 'Standard-Text') !!}
+
+<!-- Mit Text-Ersetzung und Array -->
+{!! page_text('welcome', false, '', [
+    'user' => ['firstname' => 'Max', 'lastname' => 'Mustermann']
+]) !!}
+
+<!-- Mit Text-Ersetzung und Model/Object -->
+{!! page_text('welcome', false, '', [
+    'user' => $user // $user ist ein Eloquent Model mit ->firstname, ->lastname
+]) !!}
 ```
 
 **Hinweis:** Die Texte werden automatisch für 1 Stunde gecached. Änderungen über die Filament Resource oder Seeder invalidieren den Cache automatisch.
