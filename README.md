@@ -47,7 +47,7 @@ php artisan migrate
 
 Filament Resource erstellen:
 ```
-php artisan make:filament-resource PageText --generate --model-namespace= Bmb\\PageText\\Models
+php artisan make:filament-resource PageText --generate --model-namespace=Bmb\\PageText\\Models
 ```
 
 ## Verwendung
